@@ -1,0 +1,35 @@
+*{
+    font-family: cursive !important;
+    font-weight: bold !important;
+}
+#mainNav {
+background-color: #50C4ED !important;
+}
+#offcanvasNavbar {
+    background-color: #50C4ED !important;
+
+}
+main {    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-content: center;
+}
+.sectionMain {
+    margin-top: 30%;
+    width: 100%;
+}
+.containerButton a {
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-decoration: none;
+    color: white;
+    background-color: #333A73;
+    border-radius: 5%;
+}
+.containerButton {
+    display: flex;
+    justify-content: center;
+}
