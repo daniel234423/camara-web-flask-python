@@ -1,8 +1,9 @@
-from flask import Flask, render_template, Response, jsonify
+from flask import Flask, render_template, Response, jsonify, redirect, url_for
 import uuid
 import cv2 as cv
 from app import crate_app
 import imutils as imt
+import requests
 
 
 app = crate_app()
@@ -17,6 +18,7 @@ def  gen():
 
 def frames_de_camara(): 
     ret, frame = camra.read()
+    frame = imt.resize(frame,width=800)
     if not ret:
             return False, None
     _, bufer = cv.imencode(".jpg", frame)
@@ -48,10 +50,10 @@ def foto_guardada():
     ret, frame = camra.read()
     if ret:
         cv.imwrite(nombreImagen, frame)
-    return jsonify({
-        "ret":ret,
-        "nomreImagen":nombreImagen
-    })
+    return redirect(url_for('index'))
+
+
+
 @app.route('/')
 def index():
     return render_template("index.html")
