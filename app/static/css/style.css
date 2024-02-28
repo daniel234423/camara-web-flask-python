@@ -9,6 +9,9 @@ background-color: #50C4ED !important;
     background-color: #50C4ED !important;
 
 }
+nav {
+    margin-bottom: 5em;
+}
 main {    
     display: flex;
     flex-flow: column wrap;
@@ -16,8 +19,9 @@ main {
     align-content: center;
 }
 .sectionMain {
-    margin-top: 30%;
+    margin-top: 10%;
     width: 100%;
+    height: auto;
 }
 .containerButton a {
     border: 1px solid #000000;
@@ -32,4 +36,15 @@ main {
 .containerButton {
     display: flex;
     justify-content: center;
+}
+.Cam div {
+    display: flex;
+    justify-content: center;
+}
+.camara {
+    width: 50%;
+}
+.image {
+    display: flex;
+    justify-content: space-around;
 }

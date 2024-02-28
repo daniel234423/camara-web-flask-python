@@ -1,9 +1,9 @@
-from flask import Flask, render_template, Response, jsonify, redirect, url_for
+from flask import render_template, Response,  redirect, url_for
 import uuid
 import cv2 as cv
 from app import crate_app
 import imutils as imt
-import requests
+import os
 
 
 app = crate_app()
@@ -49,7 +49,8 @@ def foto_guardada():
     nombreImagen = str(uuid.uuid4())+".jpg"
     ret, frame = camra.read()
     if ret:
-        cv.imwrite(nombreImagen, frame)
+        rutaImagen = os.path.join('app/static/img', nombreImagen)
+        cv.imwrite(rutaImagen, frame)
     return redirect(url_for('index'))
 
 
