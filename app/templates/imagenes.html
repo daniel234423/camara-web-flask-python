@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 {% block header %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,34 +13,16 @@
 <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 {%endblock%}
 
+
 <body>
     <main>
         {%block navbar%}
         {% include 'nav.html' %}
         {%endblock%}
-
-        <section class="sectionMain">
-            <article class="Cam">
-                <div>
-                    <figure class="image has-text-centered">
-                        <img class="camara" src="./camara_web" alt="">
-                    </figure>
-                </div>
-            </article>
-
-            <article>
-                <div class="containerButton">
-                    <a href="./descargar_foto">Descargar Foto</a>
-                    <a href="./foto_guardada">Foto en Servidor</a>
-                </div>
-            </article>
-        </section>
     </main>
-    {%block footer%}
-    {%include 'footer.html'%}
-    {% endblock %}
+    <footer>
+    </footer>
+
 </body>
-
-
 
 </html>

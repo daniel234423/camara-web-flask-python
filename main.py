@@ -49,11 +49,13 @@ def foto_guardada():
     nombreImagen = str(uuid.uuid4())+".jpg"
     ret, frame = camra.read()
     if ret:
-        rutaImagen = os.path.join('app/static/img', nombreImagen)
+        rutaImagen = os.path.join('app/imagenes', nombreImagen)
         cv.imwrite(rutaImagen, frame)
     return redirect(url_for('index'))
 
-
+@app.route("/fotos_guardadas")
+def fotos_guardadas():
+    return render_template("imagenes.html")
 
 @app.route('/')
 def index():
